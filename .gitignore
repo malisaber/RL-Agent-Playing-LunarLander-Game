@@ -1,0 +1,15 @@
+/build/
+/.vcpkg/
+/vcpkg_installed/
+/Q_net
+/Q_net.*
+/*.mp4
+/*.log
+*.user
+*.vcxproj*
+*.sln
+*.filters
+*.ipch
+*.o
+*.obj
+*.exe

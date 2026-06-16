@@ -1,0 +1,18 @@
+{
+  "name": "lunar-lander",
+  "version-string": "1.0.0",
+  "description": "A Lunar Lander simulation and reinforcement-learning sandbox.",
+  "dependencies": [
+    "box2d",
+    "bullet3",
+    "glad",
+    "glfw3",
+    "glm",
+    "opencv4",
+    "sfml",
+    {
+      "name": "libtorch",
+      "default-features": false
+    }
+  ]
+}

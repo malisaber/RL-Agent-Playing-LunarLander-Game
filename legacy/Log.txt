@@ -1,0 +1,1 @@
+V1: Basic, 128 -> 64 -> 32 -> 16, reward Function: simple change in distance
