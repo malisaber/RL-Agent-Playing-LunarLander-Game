@@ -43,20 +43,38 @@ The default runtime path in `src/main.cpp` supports:
 
 ## Guide
 
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/malisaber/RL-Agent-Playing-LunarLander-Game.git
+cd RL-Agent-Playing-LunarLander-Game
+```
+
+
 ## Build Requirements
 
-You will need:
-
-- A Windows C++ toolchain with CMake support
-- Git
-- PowerShell
-- GNU Make or a compatible `make` implementation
+You will need a C++ toolchain, CMake, Git, and GNU Make or a compatible `make` implementation.
 
 The project uses `vcpkg` to fetch libraries automatically. The first build can take a while because `opencv4` and `libtorch` are large dependencies.
 
+For Windows, we recommend:
+
+- Visual Studio Build Tools or another MSVC-compatible C++ toolchain
+- Git
+- PowerShell
+
+For Ubuntu, we recommend:
+
+- `build-essential`
+- `cmake`
+- `git`
+- `make`
+
 ## Build
 
-Install dependencies and configure the project:
+Install dependencies and build the project:
 
 ```sh
 make deps
@@ -69,11 +87,11 @@ Run the executable:
 make run
 ```
 
-The build output is placed under `build/bin/`.
+This workflow works on both Windows and Ubuntu. The build output is placed under `build/bin/`.
 
 ### Make Targets
 
-- `make deps` checks for Git, CMake, and `vcpkg`, then installs the C++ dependencies
+- `make deps` bootstraps `vcpkg` if needed and installs the C++ dependencies
 - `make deps-check` only verifies the local toolchain
 - `make deps-install` bootstraps `vcpkg` and installs the declared packages
 - `make build` configures and compiles the project
