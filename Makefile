@@ -10,6 +10,8 @@ VCPKG_EXE := $(VCPKG_ROOT)/vcpkg.exe
 VCPKG_BOOTSTRAP := $(VCPKG_ROOT)/bootstrap-vcpkg.bat
 VCPKG_TRIPLET ?= x64-windows
 else
+export CC := /usr/bin/gcc
+export CXX := /usr/bin/g++
 EXE_SUFFIX :=
 VCPKG_EXE := $(VCPKG_ROOT)/vcpkg
 VCPKG_BOOTSTRAP := $(VCPKG_ROOT)/bootstrap-vcpkg.sh
